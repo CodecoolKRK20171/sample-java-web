@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h1>Hello {{ client }}</h1>
+<p>Your lucky number is: {{ lucky_number }}</p>
+<ul>
+    {% for key, value in users_pass %}
+        <li>{{ key }} -  {{ value }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

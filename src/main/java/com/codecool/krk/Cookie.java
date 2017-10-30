@@ -23,7 +23,7 @@ public class Cookie implements HttpHandler {
             cookie = HttpCookie.parse(cookieStr).get(0);
             isNewSession = false;
         } else { // Create a new cookie
-            cookie = new HttpCookie("sessionId", String.valueOf(counter)); // it's not a good way to create sessionId
+            cookie = new HttpCookie("sessionId", String.valueOf(counter)); // This isn't a good way to create sessionId. Find out better!
             isNewSession = true;
             httpExchange.getResponseHeaders().add("Set-Cookie", cookie.toString());
         }
